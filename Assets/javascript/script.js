@@ -72,13 +72,14 @@ var askLower = prompt("Would you like lowercase letters? type 'yes' or 'no'.");
 
 var askUpper = prompt("Would you like uppercase letters? Type 'yes' or 'no',");
 
+
 var askNum = prompt("Would you like numbers? type 'yes' or 'no'.");
 
-var askSpecial = prompt("Would you like special characters such as '!,@,#,$,%,&,?'? Type 'yes' or 'no'.");
+var askSpecial = prompt("Would you like special characters such as '!,@,#,$,%,&,?'? Type 'yes' or 'no'.")
 
 var length;
 
-genPass();
+verifyPrompts();
 
 function getLength() {
     if(passLength >= 8 && passLength <= 128){
@@ -89,21 +90,33 @@ function getLength() {
    return passLength;
   }
 
-  function genPass() {
-    for(var length = 0; length <= passLength; length++){
-      if(askLower === "yes" && askUpper === "yes" && askNum === "yes" && askSpecial === "yes"){
-        // generate password
+  // function genPass() {
+  //   for(var length = 0; length <= passLength; length++){
+  //     if(askLower === "yes" && askUpper === "yes" && askNum === "yes" && askSpecial === "yes"){       //all chars
+  //       // generate password
 
-      }else if(askLower === "yes" && askUpper === "yes" && askNum === "yes" && askSpecial === "no"){
-        // generate password
-      }else if(askLower === "yes" && askUpper === "yes" && askNum === "no" && askSpecial === "yes"){
+  //     }else if(askLower === "yes" && askUpper === "yes" && askNum === "yes" && askSpecial === "no"){ // lower + upper + num
+  //       // generate password
+  //     }else if(askLower === "yes" && askUpper === "yes" && askNum === "no" && askSpecial === "yes"){ // lower + upper + spec
 
-      }else if(askLower === "yes" && askUpper === "no" && askNum === "yes" && askSpecial === "yes"){
+  //     }else if(askLower === "yes" && askUpper === "no" && askNum === "yes" && askSpecial === "yes"){ // lower + num + spec
         
-      }else if(askLower === "no" && askUpper === "yes" && askNum === "yes" && askSpecial === "yes")
-    }
+  //     }else if(askLower === "no" && askUpper === "yes" && askNum === "yes" && askSpecial === "yes"){ // upper + num + spec
+         
+  //     }else if(askLower === "yes" && askUpper === "yes" && askNum === "no" && askSpecial === "no"){ // lower + upper 
+       
+  //     }else if(askLower === "yes" && askUpper === "no" && askNum === "yes" && askSpecial === "no"){ // lower + num
+
+  //     }else if(askLower === "yes" && askUpper === "no" && askNum === "no" && askSpecial === "yes"){ // lower + spec
+
+  //     }else if(askLower === "no" && askUpper === "yes" && askNum === "no" && askSpecial === "yes"){ // upper + spec
+
+  //     }else if(askLower === "no" && askUpper === "yes" && askNum === "yes" && askSpecial === "no"){ // upper + num 
+
+  //     }
+  //   }
     
-  }
+  // }
 
 
   function verifyPrompts(){
@@ -132,6 +145,10 @@ function getLength() {
     }
   }
 
+  console.log(askLower);
+  console.log(askUpper);
+  console.log(askNum);
+  console.log(askSpecial);
 
 // testing with console.log
 console.log(randomAllChars(allChars));
