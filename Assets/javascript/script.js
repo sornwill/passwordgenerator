@@ -92,16 +92,45 @@ function getLength() {
   function genPass() {
     for(var length = 0; length <= passLength; length++){
       if(askLower === "yes" && askUpper === "yes" && askNum === "yes" && askSpecial === "yes"){
-        alert("true");
-      }else{
-        alert("false");
-      }
+        // generate password
+
+      }else if(askLower === "yes" && askUpper === "yes" && askNum === "yes" && askSpecial === "no"){
+        // generate password
+      }else if(askLower === "yes" && askUpper === "yes" && askNum === "no" && askSpecial === "yes"){
+
+      }else if(askLower === "yes" && askUpper === "no" && askNum === "yes" && askSpecial === "yes"){
+        
+      }else if(askLower === "no" && askUpper === "yes" && askNum === "yes" && askSpecial === "yes")
     }
     
   }
 
 
+  function verifyPrompts(){
+    if(askLower === "yes"){
+      askLower = true;
+    }else{
+      askLower = false;
+    }
 
+    if(askUpper === "yes"){
+      askUpper = true;
+    }else{
+      askUpper = false;
+    }
+
+    if(askNum === "yes"){
+      askNum = true;
+    }else{
+      askNum = false;
+    }
+
+    if(askSpecial === "yes"){
+      askSpecial = true;
+    }else{
+      askSpecial = false;
+    }
+  }
 
 
 // testing with console.log
